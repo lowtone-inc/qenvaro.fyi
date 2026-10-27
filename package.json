@@ -1,0 +1,18 @@
+{
+  "name": "qenvaro-blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Supabase-styled static blog deployed to GitHub Pages",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node src/build.js",
+    "dev": "node scripts/dev.js",
+    "new": "node scripts/new-post.js"
+  },
+  "dependencies": {
+    "marked": "18.1.0"
+  }
+}
