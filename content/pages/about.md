@@ -1,24 +1,10 @@
 ---
 title: About
-description: 이 블로그와 만든 사람에 대하여.
+description: 백엔드 개발자의 개인 기록장.
 ---
 
-**qenvaro.fyi** 는 [Lowtone](https://github.com/lowtone-inc) 의 개발 기록 블로그입니다.
+낮에는 서버와 데이터베이스를 만지는 개발자다. 주로 Postgres 위에서 API를 만들고, 쿼리가 느려지면 불려 가는 쪽이다.
 
-## 스택
+여기에는 일하다 삽질한 기록을 남긴다. 인덱스를 잘못 걸어서 느려진 쿼리, 롤백하다 터진 마이그레이션 같은 것들이다. 나중에 같은 실수를 또 하지 않으려고 쓴다. 가끔은 주말에 뭐 했는지 같은 일상도 적는다.
 
-- 프레임워크 없는 Node.js 정적 사이트 생성기 (`src/`)
-- 마크다운 렌더링: [marked](https://marked.js.org)
-- 배포: GitHub Actions → GitHub Pages
-
-## 구조
-
-```text
-content/
-  posts/   블로그 글 (YYYY-MM-DD-slug.md)
-  pages/   고정 페이지 (about.md → /about/)
-public/    정적 파일 (CSS, JS, favicon)
-src/
-  lib/        파싱·렌더링·유틸
-  templates/  레이아웃, 컴포넌트, 페이지 라우트
-```
+글은 정리가 덜 됐을 수 있다. 틀린 내용이 보이면 편하게 알려주면 좋겠다.
