@@ -1,0 +1,87 @@
+---
+import { SITE, SITE_VERIFICATION } from '@/config';
+import { withBase } from '@/lib/url';
+
+export interface ArticleMeta {
+  publishedTime: Date;
+  modifiedTime?: Date;
+  tags?: readonly string[];
+}
+
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  article?: ArticleMeta;
+  noindex?: boolean;
+}
+
+const { title, description = SITE.description, image = SITE.ogImage, article, noindex = false } = Astro.props;
+const pageTitle = title ? `${title} · ${SITE.title}` : `${SITE.title} — ${SITE.tagline}`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const imageUrl = new URL(withBase(image), Astro.site);
+const ogLocale = SITE.locale.replace('-', '_');
+
+// 검색엔진 리치 결과용 구조화 데이터
+const jsonLd = article
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: title,
+      description,
+      image: imageUrl.href,
+      url: canonical.href,
+      datePublished: article.publishedTime.toISOString(),
+      dateModified: (article.modifiedTime ?? article.publishedTime).toISOString(),
+      author: { '@type': 'Person', name: SITE.author },
+      publisher: { '@type': 'Organization', name: SITE.title },
+      mainEntityOfPage: canonical.href,
+      keywords: article.tags?.join(', '),
+    }
+  : {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: SITE.title,
+      description,
+      url: new URL(withBase('/'), Astro.site).href,
+    };
+// JSON 안의 </script> 가 태그를 닫지 않도록 < 를 이스케이프한다.
+const jsonLdText = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#1c1c1c" />
+<link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
+<link rel="canonical" href={canonical} />
+<link rel="alternate" type="application/rss+xml" title={SITE.title} href={withBase('/feed.xml')} />
+<link rel="sitemap" href={withBase('/sitemap.xml')} />
+{noindex && <meta name="robots" content="noindex" />}
+{SITE_VERIFICATION.google && <meta name="google-site-verification" content={SITE_VERIFICATION.google} />}
+{SITE_VERIFICATION.naver && <meta name="naver-site-verification" content={SITE_VERIFICATION.naver} />}
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+/>
+<link rel="stylesheet" href={withBase('/assets/styles.css')} />
+
+<title>{pageTitle}</title>
+<meta name="description" content={description} />
+<meta property="og:type" content={article ? 'article' : 'website'} />
+<meta property="og:site_name" content={SITE.title} />
+<meta property="og:locale" content={ogLocale} />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={imageUrl} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageUrl} />
+{article && <meta property="article:published_time" content={article.publishedTime.toISOString()} />}
+{article?.modifiedTime && <meta property="article:modified_time" content={article.modifiedTime.toISOString()} />}
+{article?.tags?.map((tag) => <meta property="article:tag" content={tag} />)}
+<script type="application/ld+json" set:html={jsonLdText} />

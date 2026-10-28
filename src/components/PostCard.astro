@@ -1,0 +1,25 @@
+---
+import Arrow from './Arrow.astro';
+import PostMeta from './PostMeta.astro';
+import TagList from './TagList.astro';
+import { postUrl } from '@/lib/url';
+import type { Post } from '@/lib/posts';
+
+export interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+const { title, description, tags } = post.data;
+---
+
+<article class="card">
+  <a class="card-link" href={postUrl(post.id)} aria-label={title}></a>
+  <PostMeta post={post} />
+  <h2 class="card-title">{title}</h2>
+  {description && <p class="card-desc">{description}</p>}
+  <div class="card-footer">
+    <TagList tags={tags} />
+    <span class="card-more">Read <Arrow /></span>
+  </div>
+</article>

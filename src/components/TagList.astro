@@ -1,0 +1,20 @@
+---
+import TagChip from './TagChip.astro';
+
+export interface Props {
+  tags: readonly string[];
+  // 태그별 글 수 (태그 클라우드용)
+  counts?: Record<string, number>;
+  cloud?: boolean;
+}
+
+const { tags, counts, cloud = false } = Astro.props;
+---
+
+{
+  tags.length > 0 && (
+    <div class:list={['tag-list', { 'tag-cloud': cloud }]}>
+      {tags.map((tag) => <TagChip tag={tag} count={counts?.[tag]} />)}
+    </div>
+  )
+}

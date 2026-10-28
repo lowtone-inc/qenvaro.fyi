@@ -1,0 +1,32 @@
+---
+import { postUrl } from '@/lib/url';
+import type { Post } from '@/lib/posts';
+
+export interface Props {
+  newer?: Post;
+  older?: Post;
+}
+
+const { newer, older } = Astro.props;
+const links = [
+  { post: older, label: '← 이전 글', align: 'left' },
+  { post: newer, label: '다음 글 →', align: 'right' },
+];
+---
+
+{
+  (newer || older) && (
+    <nav class="neighbors" aria-label="이웃 글">
+      {links.map(({ post, label, align }) =>
+        post ? (
+          <a class={`neighbor neighbor-${align}`} href={postUrl(post.id)}>
+            <span class="neighbor-label">{label}</span>
+            <span class="neighbor-title">{post.data.title}</span>
+          </a>
+        ) : (
+          <span />
+        ),
+      )}
+    </nav>
+  )
+}

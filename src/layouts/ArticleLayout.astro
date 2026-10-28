@@ -1,0 +1,16 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+// 마크다운 페이지(about 등)용: frontmatter 의 title/description 으로 헤더를 만든다.
+const { title, description } = Astro.props.frontmatter;
+---
+
+<BaseLayout title={title} description={description || undefined}>
+  <article class="container article">
+    <header class="article-header">
+      <h1 class="article-title">{title}</h1>
+      {description && <p class="article-desc">{description}</p>}
+    </header>
+    <div class="prose"><slot /></div>
+  </article>
+</BaseLayout>

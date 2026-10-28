@@ -1,0 +1,10 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/components/Hero.astro';
+import { withBase } from '@/lib/url';
+---
+
+<BaseLayout title="404" noindex>
+  <Hero eyebrow="Error 404" title="Page" highlight="not found" description="요청하신 페이지가 존재하지 않거나 이동되었습니다." />
+  <div class="container center"><a class="btn btn-primary" href={withBase('/')}>홈으로 돌아가기</a></div>
+</BaseLayout>

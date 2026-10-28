@@ -1,0 +1,16 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/components/Hero.astro';
+import TagList from '@/components/TagList.astro';
+import { getTagGroups } from '@/lib/posts';
+
+const groups = await getTagGroups();
+const counts = Object.fromEntries(groups.map((g) => [g.name, g.posts.length]));
+---
+
+<BaseLayout title="Tags">
+  <Hero eyebrow="Tags" title="Browse by" highlight="topic" description={`${groups.length}개의 태그`} />
+  <section class="container section">
+    <TagList tags={groups.map((g) => g.name)} counts={counts} cloud />
+  </section>
+</BaseLayout>

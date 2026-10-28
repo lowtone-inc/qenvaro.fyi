@@ -1,18 +1,26 @@
 {
   "name": "qenvaro-blog",
+  "type": "module",
   "version": "1.0.0",
   "private": true,
   "description": "Supabase-styled static blog deployed to GitHub Pages",
-  "type": "module",
   "engines": {
     "node": ">=20"
   },
   "scripts": {
-    "build": "node src/build.js",
-    "dev": "node scripts/dev.js",
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
     "new": "node scripts/new-post.js"
   },
   "dependencies": {
-    "marked": "18.1.0"
+    "@astrojs/rss": "^4.0.19",
+    "astro": "^5.18.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3"
   }
 }

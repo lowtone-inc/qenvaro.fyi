@@ -1,0 +1,32 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Arrow from '@/components/Arrow.astro';
+import PostMeta from '@/components/PostMeta.astro';
+import PostNeighbors from '@/components/PostNeighbors.astro';
+import TagList from '@/components/TagList.astro';
+import { withBase } from '@/lib/url';
+import type { Post } from '@/lib/posts';
+
+export interface Props {
+  post: Post;
+  newer?: Post;
+  older?: Post;
+}
+
+const { post, newer, older } = Astro.props;
+const { title, description, tags, pubDate, updatedDate } = post.data;
+---
+
+<BaseLayout title={title} description={description || undefined} article={{ publishedTime: pubDate, modifiedTime: updatedDate, tags }}>
+  <article class="container article">
+    <header class="article-header">
+      <a class="back-link" href={withBase('/')}><span class="flip"><Arrow /></span> 모든 글</a>
+      <PostMeta post={post} />
+      <h1 class="article-title">{title}</h1>
+      {description && <p class="article-desc">{description}</p>}
+      <TagList tags={tags} />
+    </header>
+    <div class="prose"><slot /></div>
+    <PostNeighbors newer={newer} older={older} />
+  </article>
+</BaseLayout>

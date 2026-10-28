@@ -1,0 +1,30 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Hero from '@/components/Hero.astro';
+import PostGrid from '@/components/PostGrid.astro';
+import Pagination from '@/components/Pagination.astro';
+import SectionHeader from '@/components/SectionHeader.astro';
+import TagList from '@/components/TagList.astro';
+import { HERO, SITE } from '@/config';
+import { getPosts, getTagGroups, paginate } from '@/lib/posts';
+
+export interface Props {
+  page: number;
+}
+
+const { page } = Astro.props;
+const posts = await getPosts();
+const current = paginate(posts, SITE.postsPerPage)[page - 1];
+const groups = await getTagGroups();
+const counts = Object.fromEntries(groups.map((g) => [g.name, g.posts.length]));
+---
+
+<BaseLayout title={page > 1 ? `Blog — ${page} 페이지` : undefined}>
+  {page === 1 && <Hero {...HERO} description={SITE.description} />}
+  <section class="container section">
+    <SectionHeader title="Latest posts" subtitle={`${posts.length}개의 글`} />
+    {page === 1 && <TagList tags={groups.map((g) => g.name)} counts={counts} cloud />}
+    <PostGrid posts={current.items} />
+    <Pagination page={page} totalPages={current.totalPages} />
+  </section>
+</BaseLayout>

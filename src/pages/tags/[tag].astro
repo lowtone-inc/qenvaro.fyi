@@ -1,0 +1,22 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/components/Hero.astro';
+import PostGrid from '@/components/PostGrid.astro';
+import { getTagGroups } from '@/lib/posts';
+
+// 폴더명은 기존 사이트와 같게 percent-encode 된 원문 태그를 쓴다.
+export const getStaticPaths = (async () => {
+  const groups = await getTagGroups();
+  return groups.map((group) => ({ params: { tag: encodeURIComponent(group.name) }, props: { group } }));
+}) satisfies GetStaticPaths;
+
+const { group } = Astro.props;
+---
+
+<BaseLayout title={`#${group.name}`}>
+  <Hero eyebrow="Tags" title="Posts tagged" highlight={`#${group.name}`} description={`${group.posts.length}개의 글`} />
+  <section class="container section">
+    <PostGrid posts={group.posts} />
+  </section>
+</BaseLayout>

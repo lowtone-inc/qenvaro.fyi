@@ -1,0 +1,12 @@
+---
+import { tagUrl } from '@/lib/url';
+
+export interface Props {
+  tag: string;
+  count?: number;
+}
+
+const { tag, count } = Astro.props;
+---
+
+<a class="tag" href={tagUrl(tag)}>#{tag}{count != null && <span class="tag-count">{count}</span>}</a>

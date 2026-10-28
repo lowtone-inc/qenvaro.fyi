@@ -1,0 +1,16 @@
+---
+import type { GetStaticPaths } from 'astro';
+import HomeLayout from '@/layouts/HomeLayout.astro';
+import { SITE } from '@/config';
+import { getPosts, paginate } from '@/lib/posts';
+
+// 2페이지부터 /page/N/ 으로 만든다 (1페이지는 /)
+export const getStaticPaths = (async () => {
+  const pages = paginate(await getPosts(), SITE.postsPerPage);
+  return pages.filter((p) => p.page > 1).map((p) => ({ params: { page: String(p.page) }, props: { page: p.page } }));
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+---
+
+<HomeLayout page={page} />

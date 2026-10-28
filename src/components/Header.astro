@@ -1,0 +1,45 @@
+---
+import { NAV_LINKS, SITE } from '@/config';
+import { isActive, withBase } from '@/lib/url';
+
+const path = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href={withBase('/')}>
+      <svg viewBox="0 0 109 113" width="22" height="22" aria-hidden="true">
+        <path d="M63.7 110.3c-2.9 3.6-8.7 1.6-8.8-3l-1-67.3h45.2c8.2 0 12.8 9.5 7.7 15.9z" fill="url(#lg1)"></path>
+        <path d="M63.7 110.3c-2.9 3.6-8.7 1.6-8.8-3l-1-67.3h45.2c8.2 0 12.8 9.5 7.7 15.9z" fill="url(#lg2)" fill-opacity=".2"></path>
+        <path d="M45.3 2.1c2.9-3.6 8.7-1.6 8.8 3l.4 67.3H9.8c-8.2 0-12.8-9.5-7.7-15.9z" fill="#3ECF8E"></path>
+        <defs>
+          <linearGradient id="lg1" x1="53.97" y1="54.97" x2="94.16" y2="71.83" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#249361"></stop><stop offset="1" stop-color="#3ECF8E"></stop>
+          </linearGradient>
+          <linearGradient id="lg2" x1="36.16" y1="30.58" x2="54.48" y2="65.08" gradientUnits="userSpaceOnUse">
+            <stop></stop><stop offset="1" stop-opacity="0"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span>{SITE.title}</span>
+    </a>
+    <nav class="nav" aria-label="주요 메뉴">
+      {
+        NAV_LINKS.map(({ href, label }) => (
+          <a class:list={['nav-link', { 'is-active': isActive(path, href) }]} href={withBase(href)}>
+            {label}
+          </a>
+        ))
+      }
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="테마 전환" data-theme-toggle>
+      <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+      </svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+      </svg>
+    </button>
+  </div>
+</header>
