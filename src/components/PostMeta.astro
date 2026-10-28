@@ -1,0 +1,16 @@
+---
+import { formatDate, isoDate, readingMinutes } from '@/lib/format';
+import type { Post } from '@/lib/posts';
+
+export interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+---
+
+<div class="post-meta">
+  <time datetime={isoDate(post.data.pubDate)}>{formatDate(post.data.pubDate)}</time>
+  <span class="dot">•</span>
+  <span>{readingMinutes(post.body)}분 읽기</span>
+</div>

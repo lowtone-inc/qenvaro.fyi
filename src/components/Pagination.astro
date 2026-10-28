@@ -1,0 +1,20 @@
+---
+import { pageUrl } from '@/lib/url';
+
+export interface Props {
+  page: number;
+  totalPages: number;
+}
+
+const { page, totalPages } = Astro.props;
+---
+
+{
+  totalPages > 1 && (
+    <nav class="pagination" aria-label="페이지 이동">
+      {page <= 1 ? <span class="btn btn-ghost is-disabled">← 최신 글</span> : <a class="btn btn-ghost" href={pageUrl(page - 1)}>← 최신 글</a>}
+      <span class="pagination-info">{page} / {totalPages}</span>
+      {page >= totalPages ? <span class="btn btn-ghost is-disabled">이전 글 →</span> : <a class="btn btn-ghost" href={pageUrl(page + 1)}>이전 글 →</a>}
+    </nav>
+  )
+}

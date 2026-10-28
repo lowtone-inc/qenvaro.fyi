@@ -1,8 +1,16 @@
-import { existsSync } from 'node:fs';
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
-import { config } from '../src/config.js';
-import { writeFileSafe } from '../src/lib/fs.js';
-import { slugify, isoDate } from '../src/lib/format.js';
+
+// 새 글 초안 생성: src/content/posts/<slug>.md (draft: true)
+const POSTS_DIR = 'src/content/posts';
+
+const slugify = (text) =>
+  String(text)
+    .toLowerCase()
+    .trim()
+    .replace(/[^\p{L}\p{N}\s-]/gu, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
 
 const title = process.argv.slice(2).join(' ').trim();
 if (!title) {
@@ -10,25 +18,28 @@ if (!title) {
   process.exit(1);
 }
 
-const date = isoDate(new Date());
-const file = path.join(config.paths.posts, `${date}-${slugify(title) || 'untitled'}.md`);
+const date = new Date().toISOString().slice(0, 10);
+const file = path.join(POSTS_DIR, `${slugify(title) || 'untitled'}.md`);
 
 if (existsSync(file)) {
   console.error(`이미 존재합니다: ${file}`);
   process.exit(1);
 }
 
-await writeFileSafe(
+mkdirSync(POSTS_DIR, { recursive: true });
+writeFileSync(
   file,
   `---
-title: ${title}
-description:
-date: ${date}
+title: '${title.replace(/'/g, "''")}'
+description: ''
+pubDate: ${date}
+category: Daily
 tags: []
+featured: false
 draft: true
 ---
 
 여기에 내용을 작성하세요.
 `,
 );
-console.log(`✓ ${file} (draft: true — 공개하려면 지우세요)`);
+console.log(`✓ ${file} (draft: true — 공개하려면 false 로 바꾸세요)`);

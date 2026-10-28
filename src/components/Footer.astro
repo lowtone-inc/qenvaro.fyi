@@ -1,0 +1,13 @@
+---
+import { SITE, SOCIAL_LINKS } from '@/config';
+import { withBase } from '@/lib/url';
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© {new Date().getFullYear()} {SITE.author}. Built with Astro, deployed by GitHub Actions.</p>
+    <nav class="footer-links">
+      {SOCIAL_LINKS.map(({ label, href }) => <a href={withBase(href)}>{label}</a>)}
+    </nav>
+  </div>
+</footer>

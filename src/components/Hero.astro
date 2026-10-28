@@ -1,0 +1,19 @@
+---
+export interface Props {
+  eyebrow?: string;
+  title: string;
+  highlight?: string;
+  description?: string;
+}
+
+const { eyebrow, title, highlight, description } = Astro.props;
+---
+
+<section class="hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    {eyebrow && <span class="badge"><span class="badge-dot"></span>{eyebrow}</span>}
+    <h1 class="hero-title">{title}{highlight && <> <span class="text-brand">{highlight}</span></>}</h1>
+    {description && <p class="hero-desc">{description}</p>}
+  </div>
+</section>
