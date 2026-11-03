@@ -15,10 +15,11 @@ npm run new -- "제목"  # src/content/posts/<slug>.md 초안 생성 (draft: tru
 
 ## 배포 규칙
 
-- `main` 에 push/merge 되면 `.github/workflows/deploy.yml` 이 빌드 후 GitHub Pages 에 **자동 배포**한다.
-- `main` 에 직접 push 하지 않는다. 작업 브랜치 → PR → merge 순서로만 반영한다 (PR 에서는 빌드만 검증).
+- 브랜치는 `main` 하나만 쓴다. 작업 브랜치·PR 없이 **`main` 에 바로 push** 한다.
+- `main` 에 push 되면 `.github/workflows/deploy.yml` 이 빌드 후 GitHub Pages 에 **자동 배포**한다. 빌드가 깨진 채 push 하면 배포가 실패하므로 push 전 `npm run build` 확인은 필수.
 - 배포 절차 전체는 `/deploy` 스킬(`.claude/skills/deploy/SKILL.md`)을 따른다.
-- 커스텀 도메인은 `public/CNAME` — 지우거나 바꾸지 않는다.
+- 커스텀 도메인은 `public/CNAME` — 지우거나 바꾸지 않는다. `public/.nojekyll` 도 유지한다.
+- Node 버전은 `.nvmrc`(22) 와 workflow 의 `node-version` 을 같이 맞춘다.
 
 ## 구조
 
