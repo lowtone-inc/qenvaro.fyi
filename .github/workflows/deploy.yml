@@ -3,9 +3,6 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
-  # PR 은 빌드(타입 체크 포함)만 검증하고 배포하지 않는다.
-  pull_request:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -30,7 +27,6 @@ jobs:
 
       - name: Configure Pages
         id: pages
-        if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
 
       - name: Install
@@ -43,12 +39,10 @@ jobs:
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
 
       - uses: actions/upload-pages-artifact@v3
-        if: github.event_name != 'pull_request'
         with:
           path: ./dist
 
   deploy:
-    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:
