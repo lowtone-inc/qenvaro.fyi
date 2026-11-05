@@ -2,7 +2,7 @@ export const SITE = {
   title: 'qenvaro.fyi',
   tagline: 'Build in a weekend. Write for a lifetime.',
   description: 'Supabase 감성으로 만든 개발 블로그 — 기록하고, 배우고, 공유합니다.',
-  author: 'Lowtone',
+  author: 'qenvaro',
   locale: 'ko-KR',
   postsPerPage: 6,
   // 글별 이미지가 없을 때 쓰는 공유 이미지 (public/ 기준 경로)

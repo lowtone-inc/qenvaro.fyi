@@ -14,10 +14,10 @@ export interface Props {
 }
 
 const { post, newer, older } = Astro.props;
-const { title, description, tags, pubDate, updatedDate } = post.data;
+const { title, description, image, tags, pubDate, updatedDate } = post.data;
 ---
 
-<BaseLayout title={title} description={description || undefined} article={{ publishedTime: pubDate, modifiedTime: updatedDate, tags }}>
+<BaseLayout title={title} description={description || undefined} image={image} article={{ publishedTime: pubDate, modifiedTime: updatedDate, tags }}>
   <article class="container article">
     <header class="article-header">
       <a class="back-link" href={withBase('/')}><span class="flip"><Arrow /></span> 모든 글</a>

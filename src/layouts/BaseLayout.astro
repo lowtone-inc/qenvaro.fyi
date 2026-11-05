@@ -11,9 +11,10 @@ export interface Props {
   description?: string;
   article?: ArticleMeta;
   noindex?: boolean;
+  image?: string;
 }
 
-const { title, description, article, noindex } = Astro.props;
+const { title, description, image, article, noindex } = Astro.props;
 
 // 페인트 전에 저장된 테마를 적용해 깜빡임을 막는다.
 const themeBootScript = `(()=>{try{const t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}})();`;
@@ -22,7 +23,7 @@ const themeBootScript = `(()=>{try{const t=localStorage.getItem('theme');if(t)do
 <!doctype html>
 <html lang={SITE.locale.split('-')[0]}>
   <head>
-    <BaseHead title={title} description={description} article={article} noindex={noindex} />
+    <BaseHead title={title} description={description} image={image} article={article} noindex={noindex} />
     <script is:inline set:html={themeBootScript} />
   </head>
   <body>
