@@ -1,7 +1,7 @@
 export const SITE = {
   title: 'qenvaro.fyi',
   tagline: 'Build in a weekend. Write for a lifetime.',
-  description: 'Supabase 감성으로 만든 개발 블로그 — 기록하고, 배우고, 공유합니다.',
+  description: '기록하고, 배우고, 공유하는 블로그.',
   author: 'qenvaro',
   locale: 'ko-KR',
   postsPerPage: 6,
@@ -29,6 +29,5 @@ export const NAV_LINKS = [
 ] as const;
 
 export const SOCIAL_LINKS = [
-  { href: 'https://github.com/lowtone-inc/qenvaro.fyi', label: 'GitHub' },
   { href: '/feed.xml', label: 'RSS' },
 ] as const;

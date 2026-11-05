@@ -20,12 +20,12 @@ draft: false
 천기누설의 죄로 얼굴에 낙인이 찍힌 승려 '능면승'이\
 사주를 풀어준다는 컨셉이에요
 
-![능면승 첫화면](/images/neungmyeonseung-pros-cons/01.jpg)
+<img src="/images/neungmyeonseung-pros-cons/01.jpg" alt="사주마을 능면승 첫화면" width="800" height="1142" decoding="async" />
 
 입력도 스님과 대화하듯\
 성별, 이름, 생년월일, 태어난 시, 이메일 순서로 진행돼요
 
-![능면승 정보입력](/images/neungmyeonseung-pros-cons/02.jpg)
+<img src="/images/neungmyeonseung-pros-cons/02.jpg" alt="사주마을 능면승 정보입력" width="800" height="1142" loading="lazy" decoding="async" />
 
 ## 📌 결과 구성
 
@@ -36,7 +36,7 @@ draft: false
 상단 메뉴에서 원하는 편으로 바로 넘어갈 수 있어서\
 길어도 읽기 편했어요
 
-![능면승 여덟글자 오행](/images/neungmyeonseung-pros-cons/03.jpg)
+<img src="/images/neungmyeonseung-pros-cons/03.jpg" alt="사주마을 능면승 여덟글자 오행" width="720" height="1142" loading="lazy" decoding="async" />
 
 맨 앞에는 여덟 글자 판과 오행 개수, 신살이 정리돼요\
 저는 금2 목0 수3 토2 화1에 원진살이 나왔어요
@@ -47,19 +47,19 @@ draft: false
 목이 0이라 계획은 꼼꼼히 세우는데 첫걸음이 늦을 수 있다는 해석이었고\
 초록색, 동쪽, 오늘 끝낼 일 하나만 적기 같은 처방까지 붙어 있었어요
 
-![능면승 색 방향 습관](/images/neungmyeonseung-pros-cons/04.jpg)
+<img src="/images/neungmyeonseung-pros-cons/04.jpg" alt="사주마을 능면승 색 방향 습관" width="720" height="1142" loading="lazy" decoding="async" />
 
 ② 그대만 모르는 그림자\
 답장 보내기 전에 문장을 고치고\
 끝난 대화를 마음속에서 다시 이어간다는 부분이 가장 공감됐어요
 
-![능면승 그대만 모르는 그림자](/images/neungmyeonseung-pros-cons/05.jpg)
+<img src="/images/neungmyeonseung-pros-cons/05.jpg" alt="사주마을 능면승 그대만 모르는 그림자" width="720" height="1142" loading="lazy" decoding="async" />
 
 ③ 새는 구멍\
 '언젠가 쓰겠지' 하는 지출을 짚어주고\
 무엇을 샀는지보다 왜 샀는지 적어보라고 해요
 
-![능면승 새는 구멍](/images/neungmyeonseung-pros-cons/06.jpg)
+<img src="/images/neungmyeonseung-pros-cons/06.jpg" alt="사주마을 능면승 새는 구멍" width="720" height="1142" loading="lazy" decoding="async" />
 
 ## ⭕ 좋았던 점 3가지
 
