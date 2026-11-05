@@ -1,6 +1,6 @@
 export const SITE = {
   title: 'qenvaro.fyi',
-  tagline: 'Build in a weekend. Write for a lifetime.',
+  tagline: '천천히 쌓아가는 일상 기록',
   description: '기록하고, 배우고, 공유하는 블로그.',
   author: 'qenvaro',
   locale: 'ko-KR',
@@ -12,8 +12,8 @@ export const SITE = {
 // 홈 히어로 문구
 export const HERO = {
   eyebrow: 'Now writing',
-  title: 'Build in a weekend.',
-  highlight: 'Write for a lifetime.',
+  title: '오늘 해 본 것,',
+  highlight: '천천히 적어 두기.',
 } as const;
 
 // 서치콘솔 소유 확인 코드. 값이 있을 때만 meta 태그를 출력한다.
