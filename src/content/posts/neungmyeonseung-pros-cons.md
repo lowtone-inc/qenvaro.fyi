@@ -1,0 +1,104 @@
+---
+title: '[솔직리뷰] 인스타에서 자주 보이는 ''사주마을 능면승'' 후기 (좋았던 점·아쉬운 점 정리)'
+description: '사주마을 능면승 솔직리뷰. 컨셉, 결과 구성, 인상 깊었던 부분과 좋았던 점·아쉬웠던 점을 정리했어요.'
+pubDate: 2026-11-05T14:10:00+09:00
+category: Daily
+tags: ['사주마을', '능면승', '능면승사주', '사주후기', '온라인사주', '사주사이트추천', '사주리뷰']
+featured: false
+draft: false
+---
+안녕하세요 🙂
+
+오늘은 요즘 인스타그램 광고로 자주 보이는\
+'사주마을 능면승' 후기를 정리해보려고 해요\
+직접 결제해서 받아본 후기예요
+
+## 🔮 능면승은 어떤 사주인가요
+
+세종 25년, 귀문을 타고나 서민들의 앞날을 봐주다가\
+천기누설의 죄로 얼굴에 낙인이 찍힌 승려 '능면승'이\
+사주를 풀어준다는 컨셉이에요
+
+<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+
+입력도 스님과 대화하듯\
+성별, 이름, 생년월일, 태어난 시, 이메일 순서로 진행돼요
+
+<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+
+## 📌 결과 구성
+
+결과는 전 여덟 편으로 나뉘어 있어요\
+一 타고난 그릇 / 二 오행의 빈자리 / 三 그대란 사람 / 四 그대에게 올 사람\
+五 재물의 문 / 六 일과 이름 / 七 그대의 때 / 八 얼굴의 글자와 처방
+
+상단 메뉴에서 원하는 편으로 바로 넘어갈 수 있어서\
+길어도 읽기 편했어요
+
+<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+
+맨 앞에는 여덟 글자 판과 오행 개수, 신살이 정리돼요\
+저는 금2 목0 수3 토2 화1에 원진살이 나왔어요
+
+## 💭 인상 깊었던 부분
+
+① 오행의 빈자리\
+목이 0이라 계획은 꼼꼼히 세우는데 첫걸음이 늦을 수 있다는 해석이었고\
+초록색, 동쪽, 오늘 끝낼 일 하나만 적기 같은 처방까지 붙어 있었어요
+
+<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+
+② 그대만 모르는 그림자\
+답장 보내기 전에 문장을 고치고\
+끝난 대화를 마음속에서 다시 이어간다는 부분이 가장 공감됐어요
+
+<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+
+③ 새는 구멍\
+'언젠가 쓰겠지' 하는 지출을 짚어주고\
+무엇을 샀는지보다 왜 샀는지 적어보라고 해요
+
+<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+
+## ⭕ 좋았던 점 3가지
+
+1️⃣ 세계관과 연출\
+사극 같은 스토리, 대화형 입력, 사극체 문장까지 컨셉이 일관돼서 몰입감이 좋아요
+
+2️⃣ 근거를 같이 보여줘요\
+"수가 셋이라", "목이 없어서"처럼 왜 그런 해석이 나왔는지 같이 설명해줘요
+
+3️⃣ 처방이 현실적이에요\
+색·방향·습관, 돈 들어온 날 바로 나눠두기처럼 당장 해볼 수 있는 조언이 많아요
+
+## ❌ 아쉬웠던 점 3가지
+
+1️⃣ 분량이 많아요\
+한 번에 다 읽기는 힘들어서 저는 나눠서 읽었어요
+
+2️⃣ 한자가 많아요\
+여덟 글자 판이나 달별 흐름에 한자가 많아서 처음엔 낯설 수 있어요
+
+3️⃣ 인연 파트는 단정하지 않아요\
+미래 배우자 얼굴이나 직업을 콕 집어주는 스타일은 아니에요\
+생김새는 단정할 근거가 없다고 나와요
+
+## 📝 총평
+
+추천해요 👍\
+뻔한 운세 문장에 질린 분\
+사극, 오컬트 세계관 좋아하는 분\
+근거 있는 설명을 좋아하는 분
+
+비추천해요 👎\
+밝고 가벼운 분위기를 원하는 분\
+미래 배우자 얼굴처럼 콕 집는 결과를 원하는 분
+
+정리하자면 '연출은 확실하고, 내용은 근거까지 붙어서 생각보다 구체적'이 제 결론이에요\
+물론 사주 결과는 참고용으로 가볍게 보시길 추천드려요
+
+<https://saju-maeul.kr/saju/app/monk/intro>
+
+오늘 포스팅이 도움이 되셨다면 공감과 댓글 부탁드려요 🙂
+
+\#사주마을 \#능면승 \#능면승사주 \#사주후기 \#온라인사주 \#사주사이트추천 \#사주리뷰
